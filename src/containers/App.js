@@ -4,6 +4,7 @@ import action_2 from '../store/actionCreators/action_2'
 import Component1 from '../components/component_1';
 import Component2 from '../components/component_2';
 
+//TODO: add routing template
 function App(props){
     return(
         <div>
