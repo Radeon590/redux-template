@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { Provider } from 'react-redux';
 import store from './store/store';
-import COMPONENT_1_W from './components/wrapComponents/component_1_w';
-import COMPONENT_2_W from './components/wrapComponents/component_2_w';
+import App from "./containers/App";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
 	<Provider store={store}>
-		<COMPONENT_1_W />
-		<COMPONENT_2_W />
-	</Provider>,
-document.getElementById('root'));
+		<App />
+	</Provider>
+  </StrictMode>
+);
