@@ -4,11 +4,11 @@ import action_2 from '../store/actionCreators/action_2'
 import Component1 from '../components/component_1';
 import Component2 from '../components/component_2';
 
-function App({value_1, value_2, action_1, action_2}){
+function App(props){
     return(
         <div>
-            <Component1 value_1={value_1} change_value_1={action_1}/>
-            <Component2 value_2={value_2} change_value_2={action_2}/>
+            <Component1 value_1={props.value_1} change_value_1={props.action_1}/>
+            <Component2 value_2={props.value_2} change_value_2={props.action_2}/>
         </div>
     );
 }
